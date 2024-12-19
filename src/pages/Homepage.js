@@ -73,7 +73,7 @@ const Homepage = () => {
           </h1>
           {user ? (
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 mt-4">
-              <p className="text-2xl font-semibold">Bienvenue, {user.displayName || user.email}!</p>
+              <p className="text-2xl font-semibold">Welcome, {user.displayName || user.email}!</p>
             </div>
           ) : (
             <p className="text-xl mt-4 font-light">Connectez-vous pour commencer l'aventure</p>
@@ -97,7 +97,7 @@ const Homepage = () => {
                         <Code className="w-5 h-5" />
                         Web Development
                       </h3>
-                      <p className="text-white/80 mt-2">Maîtrisez le développement web moderne</p>
+                      <p className="text-white/80 mt-2">Master modern web development</p>
                     </div>
                     <button 
                       onClick={() => handleNavigate('/WebDevelopment')} 
@@ -116,13 +116,13 @@ const Homepage = () => {
                         <Database className="w-5 h-5" />
                         Data Structures
                       </h3>
-                      <p className="text-white/80 mt-2">Explorez les structures de données essentielles</p>
+                      <p className="text-white/80 mt-2">Explore essential data structures</p>
                     </div>
                     <button 
                       onClick={() => handleNavigate('/data-structures')} 
                       className="px-4 py-2 bg-green-500 rounded-lg hover:bg-green-400 text-white transition-all duration-300 flex items-center gap-2"
                     >
-                      Commencer
+                      Get started
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -133,7 +133,7 @@ const Homepage = () => {
             <section className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-xl">
               <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
                 <Trophy className="w-6 h-6" />
-                Top 10 Meilleurs Scores
+                Top 10 best Scores
               </h2>
               <div className="space-y-3">
                 {topScores.length > 0 ? (

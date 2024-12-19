@@ -35,13 +35,13 @@ const SignInPage = () => {
         {/* Main card */}
         <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 space-y-6 shadow-2xl">
           <h2 className="text-3xl font-bold text-center text-white">
-            Connexion
+          Login
           </h2>
 
           <form onSubmit={handleSignIn} className="space-y-5">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-1">
-                Adresse e-mail
+              Email address
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 h-5 w-5" />
@@ -59,7 +59,7 @@ const SignInPage = () => {
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-white/90 mb-1">
-                Mot de passe
+                Password
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 h-5 w-5" />
@@ -83,7 +83,7 @@ const SignInPage = () => {
               {loading ? (
                 <div className="flex items-center justify-center">
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                  <span className="ml-2">Connexion...</span>
+                  <span className="ml-2">Logging in...</span>
                 </div>
               ) : (
                 "Se connecter"
@@ -93,15 +93,15 @@ const SignInPage = () => {
 
           <div className="space-y-4">
             <p className="text-center text-sm text-white/80">
-              Vous n'avez pas de compte ?
+            Don't have an account?
               <a href="/signup" className="text-white hover:text-white/80 ml-1 font-medium">
-                Créez un compte
+              Create an account
               </a>
             </p>
             
             <p className="text-center">
               <a href="/forgot-password" className="text-sm text-white/80 hover:text-white">
-                Mot de passe oublié ?
+              Forgot password?
               </a>
             </p>
           </div>

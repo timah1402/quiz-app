@@ -37,13 +37,13 @@ const SignUpPage = () => {
         {/* Main card */}
         <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 space-y-6 shadow-2xl">
           <h2 className="text-3xl font-bold text-center text-white">
-            Créer un compte
+          Create an account
           </h2>
 
           <form onSubmit={handleSignUp} className="space-y-5">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-white/90 mb-1">
-                Nom complet
+              Full name
               </label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 h-5 w-5" />
@@ -61,7 +61,7 @@ const SignUpPage = () => {
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-1">
-                Adresse e-mail
+              Email address
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 h-5 w-5" />
@@ -79,7 +79,7 @@ const SignUpPage = () => {
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-white/90 mb-1">
-                Mot de passe
+                Password
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 h-5 w-5" />
@@ -103,7 +103,7 @@ const SignUpPage = () => {
               {loading ? (
                 <div className="flex items-center justify-center">
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                  <span className="ml-2">Création en cours...</span>
+                  <span className="ml-2">Creating...</span>
                 </div>
               ) : (
                 "Créer un compte"
@@ -112,9 +112,9 @@ const SignUpPage = () => {
           </form>
 
           <p className="text-center text-sm text-white/80">
-            Vous avez déjà un compte ?
+          Already have an account?
             <a href="/signin" className="text-white hover:text-white/80 ml-1 font-medium">
-              Connectez-vous
+              sign-in
             </a>
           </p>
         </div>
