@@ -86,7 +86,7 @@ const SignInPage = () => {
                   <span className="ml-2">Logging in...</span>
                 </div>
               ) : (
-                "Se connecter"
+                "Login"
               )}
             </button>
           </form>
