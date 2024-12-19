@@ -103,7 +103,7 @@ const Homepage = () => {
                       onClick={() => handleNavigate('/WebDevelopment')} 
                       className="px-4 py-2 bg-green-500 rounded-lg hover:bg-green-400 text-white transition-all duration-300 flex items-center gap-2"
                     >
-                      Commencer
+                      Get started
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
