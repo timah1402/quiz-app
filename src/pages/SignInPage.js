@@ -16,10 +16,10 @@ const SignInPage = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      alert(`Bienvenue, ${user.email}!`);
+      alert(`Welcome, ${user.email}!`);
       navigate('/home');
     } catch (error) {
-      alert('Erreur : ' + error.message);
+      alert('Error: ' + error.message);
     } finally {
       setLoading(false);
     }
@@ -52,7 +52,7 @@ const SignInPage = () => {
                   onChange={(e) => setEmail(e.target.value)} 
                   required 
                   className="w-full px-10 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/40"
-                  placeholder="Entrez votre e-mail" 
+                  placeholder="Enter your email" 
                 />
               </div>
             </div>
@@ -70,7 +70,7 @@ const SignInPage = () => {
                   onChange={(e) => setPassword(e.target.value)} 
                   required 
                   className="w-full px-10 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/40"
-                  placeholder="Entrez votre mot de passe" 
+                  placeholder="Enter your password" 
                 />
               </div>
             </div>

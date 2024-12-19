@@ -76,7 +76,7 @@ const Homepage = () => {
               <p className="text-2xl font-semibold">Welcome, {user.displayName || user.email}!</p>
             </div>
           ) : (
-            <p className="text-xl mt-4 font-light">Connectez-vous pour commencer l'aventure</p>
+            <p className="text-xl mt-4 font-light">Log in to start the adventure</p>
           )}
         </div>
       </header>
@@ -87,7 +87,7 @@ const Homepage = () => {
             <section className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-xl">
               <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
                 <Book className="w-6 h-6" />
-                Choisissez votre parcours
+                Choose your path
               </h2>
               <div className="space-y-4">
                 <div className="bg-white/5 rounded-xl p-4 hover:bg-white/20 transition-all duration-300">
@@ -150,7 +150,7 @@ const Homepage = () => {
                     </div>
                   ))
                 ) : (
-                  <p className="text-white/80 text-center">Aucun score disponible</p>
+                  <p className="text-white/80 text-center">No scores available</p>
                 )}
               </div>
             </section>
@@ -161,7 +161,7 @@ const Homepage = () => {
               onClick={() => navigate('/login')} 
               className="px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg"
             >
-              Se connecter pour commencer
+              Log in to start
             </button>
           </div>
         )}
@@ -170,19 +170,8 @@ const Homepage = () => {
           <section className="mt-8 bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-xl">
             <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-2">
               <History className="w-6 h-6" />
-              Votre Historique
+              Your History
             </h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {userScores.map((score, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300"
-                >
-                  <span className="text-white/80">{score.timestamp.toDate().toLocaleString()}</span>
-                  <span className="text-white font-semibold">{score.score} pts</span>
-                </div>
-              ))}
-            </div>
           </section>
         )}
       </main>

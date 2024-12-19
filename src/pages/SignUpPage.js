@@ -18,10 +18,10 @@ const SignUpPage = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       await updateProfile(user, { displayName: name });
-      alert(`Compte créé avec succès, Bienvenue ${name} !`);
+      alert(`Account successfully created, Welcome ${name}!`);
       navigate('/signin');
     } catch (error) {
-      alert('Erreur : ' + error.message);
+      alert('Error: ' + error.message);
     } finally {
       setLoading(false);
     }
@@ -54,7 +54,7 @@ const SignUpPage = () => {
                   onChange={(e) => setName(e.target.value)} 
                   required 
                   className="w-full px-10 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/40"
-                  placeholder="Entrez votre nom complet" 
+                  placeholder="Enter your full name" 
                 />
               </div>
             </div>
@@ -72,7 +72,7 @@ const SignUpPage = () => {
                   onChange={(e) => setEmail(e.target.value)} 
                   required 
                   className="w-full px-10 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/40"
-                  placeholder="Entrez votre e-mail" 
+                  placeholder="Enter your email" 
                 />
               </div>
             </div>
@@ -90,7 +90,7 @@ const SignUpPage = () => {
                   onChange={(e) => setPassword(e.target.value)} 
                   required 
                   className="w-full px-10 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/40"
-                  placeholder="Entrez votre mot de passe" 
+                  placeholder="Enter your password" 
                 />
               </div>
             </div>
@@ -106,7 +106,7 @@ const SignUpPage = () => {
                   <span className="ml-2">Creating...</span>
                 </div>
               ) : (
-                "Créer un compte"
+                "Create an account"
               )}
             </button>
           </form>
@@ -114,7 +114,7 @@ const SignUpPage = () => {
           <p className="text-center text-sm text-white/80">
           Already have an account?
             <a href="/signin" className="text-white hover:text-white/80 ml-1 font-medium">
-              sign-in
+              Sign in
             </a>
           </p>
         </div>
